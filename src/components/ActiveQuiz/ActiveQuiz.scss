@@ -1,0 +1,10 @@
+.active-quiz {
+    color: yellow;
+    border: 1px solid #aaa;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    & strong {
+        margin-left: 20px;
+    }
+}
