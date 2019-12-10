@@ -1,0 +1,36 @@
+.finished {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    max-width: 600px;
+    min-width: 400px;
+    margin: 30px auto;
+    padding: 10px 30px 30px;
+    & strong {
+        margin-right: 20px;
+    }
+    &__ul {
+        list-style: none;
+        padding-inline-start: 0;
+        & li {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            text-align: left;
+            line-height: 1.42;
+            padding: 8px 0;
+            & span {
+                margin-right: 10px;
+            }
+            & i {
+                margin-left: 10px;
+                &.success{
+                    color: rgba(161, 240, 69, 1)
+                }
+                &.error{
+                    color: rgba(240, 87, 108, 1)
+                }
+            }
+        }
+    }
+}

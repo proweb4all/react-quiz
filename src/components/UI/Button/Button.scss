@@ -1,0 +1,32 @@
+.button-back{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:focus{
+        outline: none;
+    }
+    &:active{
+        box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);
+    }
+    &:disabled{
+        background: #ccc;
+        color: #000;
+        cursor: not-allowed;
+    }
+    &.error{
+        background-color: rgba(240, 87, 108, 1);
+    }
+    &.success{
+        background-color: rgba(161, 240, 69, 1);
+    }
+    &.primary{
+        background: #2884f6;
+        color: #fff;
+    }
+}
