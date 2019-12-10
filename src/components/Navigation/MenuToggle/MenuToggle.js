@@ -13,7 +13,7 @@ const MenuToggle = props => {
         classes.push('fa-bars')
     }
     return (
-        <i className={classes.join(' ')} onClick={props.onClick} />
+        <i className={classes.join(' ')} onClick={props.onToggle} />
     )
 }
 
