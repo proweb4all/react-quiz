@@ -1,3 +1,22 @@
 .quiz-list{
-    background-color: #aaa;
+    height: 100vh;
+    color: #fff;
+    padding-top: 50px;
+    background: linear-gradient(90deg, #fd8355 0%, #f79cbd 100%);
+    & ul{
+        padding: 0;
+        list-style: none;
+    }
+    &__li{
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 5px auto;
+        cursor: pointer;
+        &:hover{
+            color: yellow;
+        }
+    }
 }

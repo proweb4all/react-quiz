@@ -8,7 +8,8 @@
     transition: .2s ease-in;
     z-index: 70;
     &:hover{
-        opacity: .7;
+        // opacity: .7;
+        color: yellow;
     }
     &.open{
         left: 320px;
