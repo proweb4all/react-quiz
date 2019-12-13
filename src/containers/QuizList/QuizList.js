@@ -16,7 +16,7 @@ export default class QuizList extends Component {
     return (
       <div className='quiz-list'>
         <div>
-          <h1>Quiz List</h1>
+          <h1>Список тестов</h1>
           <ul>
             {this.renderQuizes()}
           </ul>
