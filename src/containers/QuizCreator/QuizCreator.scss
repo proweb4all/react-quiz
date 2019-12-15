@@ -1,3 +1,22 @@
 .quiz-creator{
-    background-color: #aaa;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    padding-top: 50px;
+    background: linear-gradient(270deg, #f0613c 0%, #f0783c 100%);
+    & div{
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
+    }
+    & h1{
+        color: #fff;
+    }
+    & form{
+        background: #eee;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+        padding: 20px;
+        border-radius: 5px;
+    }
 }
