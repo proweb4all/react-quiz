@@ -17,7 +17,7 @@ function createFormControls() {
     question: createControl({
       label: 'Введите вопрос',
       errorMessage: 'Введите непустой вопрос'
-    }),
+    }, {required: true}),
     option1: createOptionControl(1),
     option2: createOptionControl(2),
     option3: createOptionControl(3),
@@ -39,8 +39,32 @@ export default class QuizCreator extends Component {
   }
   addQuestionHandler = event => {
     event.preventDefault()
+    const quiz = this.state.quiz.concat()
+    const index = quiz.length + 1
+    const {question, option1, option2, option3, option4} =this.state.formControls
+    const questionItem = {
+      question: question.value,
+      id: index,
+      rightAnswerId: this.state.rightAnswerId,
+      answers: [
+        { text: option1.value, id: option1.id },
+        { text: option2.value, id: option2.id },
+        { text: option3.value, id: option3.id },
+        { text: option4.value, id: option4.id }
+      ]
+    }
+    quiz.push(questionItem)
+    this.setState({
+      quiz,
+      rightAnswerId: 1,
+      isFormValid: false,
+      formControls: createFormControls()
+    })
   }
-  createQuizHandler = () => {}
+  createQuizHandler = event => {
+    event.preventDefault()
+    console.log(this.state.quiz)
+  }
   changeHandler = (value, controlName) => {
     const formControls = {...this.state.formControls}
     const control = {...formControls[controlName]}
@@ -86,10 +110,10 @@ export default class QuizCreator extends Component {
       value={this.state.rightAnswerId}
       onChange={this.selectChangeHandler}
       options={[
-        {text: 1, value: 1},
-        {text: 2, value: 2},
-        {text: 3, value: 3},
-        {text: 4, value: 4}
+        {text: 'Вариант 1', value: 1},
+        {text: 'Вариант 2', value: 2},
+        {text: 'Вариант 3', value: 3},
+        {text: 'Вариант 4', value: 4}
       ]}
     />
     return (
