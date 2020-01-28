@@ -9,8 +9,8 @@ class Drawer extends Component {
       return (
         <li key={ind}>
           <NavLink
-            className='active'
             to={link.to}
+            activeClassName='actived'
             exact={links.exact}
             onClick={this.props.onClose}
           >
